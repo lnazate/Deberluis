@@ -49,6 +49,12 @@ public class GeneradorYRastreador {
         return mensajesNegativos[indiceAleatorio];
     }
 
-
+    public void mostrarRendimiento(int aciertos, int totalPreguntas) {
+        double porcentaje = ((double) aciertos / totalPreguntas) * 100;
+        if (porcentaje < 75) {
+            System.out.println("Por favor pide ayuda adicional a tu instructor.");
+        } else {
+            System.out.println("Felicidades, estás listo para pasar al siguiente nivel!");
+        }
     }
 }
