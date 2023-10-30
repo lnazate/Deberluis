@@ -24,4 +24,26 @@ public class GeneradorYRastreador {
         return operando1 + operando2 == respuestaUsuario;
     }
 
+    public String generarMensajePositivo() {
+        String[] mensajesPositivos = {
+            "¡Muy bien!",
+            "¡Excelente!",
+            "¡Buen trabajo!",
+            "¡Sigue así!"
+        };
+        return mensajesPositivos[random.nextInt(mensajesPositivos.length)];
+    }
+
+    public String generarMensajeNegativo() {
+        String[] mensajesNegativos = {
+            "No. Por favor intenta de nuevo.",
+            "Incorrecto. Intenta una vez más.",
+            "¡No te rindas!",
+            "No. Sigue intentando."
+        };
+        return mensajesNegativos[random.nextInt(mensajesNegativos.length)];
+    }
+
+
+    }
 }
