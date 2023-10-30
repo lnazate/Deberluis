@@ -12,7 +12,16 @@ public class ClasePrincipal {
         System.out.println("Elige el tipo de problema aritmético (1: Suma, 2: Resta, 3: Multiplicación, 4: División, 5: Aleatorio): ");
         int tipoProblema = entrada.nextInt();
         
+        GeneradorYRastreador generadorYRastreador = new GeneradorYRastreador(nivelDificultad, tipoProblema);
+        
+        int aciertos = 0;
+        int intentos = 0;
+        int totalPreguntas = 10;
+        
+        while (intentos < totalPreguntas) {
+            int[] operandos = generadorYRastreador.generarOperandos();
+            String pregunta = generadorYRastreador.generarPregunta(operandos[0], operandos[1]);
+            
 
-    }
 }
 
