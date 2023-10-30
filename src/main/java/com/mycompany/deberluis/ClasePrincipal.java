@@ -22,7 +22,24 @@ public class ClasePrincipal {
             int[] operandos = generadorYRastreador.generarOperandos();
             String pregunta = generadorYRastreador.generarPregunta(operandos[0], operandos[1]);
             
-
+            boolean esRespuestaCorrecta = false;
+            
+            while (!esRespuestaCorrecta) {
+                System.out.println(pregunta);
+                int respuestaUsuario = entrada.nextInt();
+                
+                if (generadorYRastreador.esRespuestaCorrecta(operandos[0], operandos[1], respuestaUsuario)) {
+                    aciertos++;
+                    String mensajePositivo = generadorYRastreador.generarMensajePositivo();
+                    System.out.println(mensajePositivo);
+                    esRespuestaCorrecta = true;
+                } else {
+                    String mensajeNegativo = generadorYRastreador.generarMensajeNegativo();
+                    System.out.println(mensajeNegativo);
+                }
+            }
+            
+            intentos++;
         }
         
         generadorYRastreador.mostrarRendimiento(aciertos, totalPreguntas);
