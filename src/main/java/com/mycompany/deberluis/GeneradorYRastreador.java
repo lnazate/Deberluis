@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.deberluis;
+import java.util.Random;
 
-/**
- *
- * @author LENOVO
- */
 public class GeneradorYRastreador {
-    
+    private int nivelDificultad;
+    private int tipoProblema;
+    private Random random;
+
+    public GeneradorYRastreador(int nivelDificultad, int tipoProblema) {
+        this.nivelDificultad = nivelDificultad;
+        this.tipoProblema = tipoProblema;
+        this.random = new Random();
+    }
+
 }

@@ -23,5 +23,11 @@ public class ClasePrincipal {
             String pregunta = generadorYRastreador.generarPregunta(operandos[0], operandos[1]);
             
 
+        }
+        
+        generadorYRastreador.mostrarRendimiento(aciertos, totalPreguntas);
+        
+        entrada.close();
+    }
 }
 
